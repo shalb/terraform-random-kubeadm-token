@@ -20,9 +20,5 @@ data "template_file" "kubeadm_token" {
     token2 = join("", random_shuffle.token2.result)
   }
 
-  depends_on = [
-    random_shuffle.token1,
-    random_shuffle.token1,
-  ]
 }
 
